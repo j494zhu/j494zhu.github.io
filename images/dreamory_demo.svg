@@ -1,8 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" font-family="Helvetica Neue, Arial, sans-serif">
+  <style>
+    @media (prefers-color-scheme: dark) {
+      .bg-top { stop-color: #20252d; }
+      .bg-bottom { stop-color: #181d24; }
+      .box { fill: #262c35; }
+      .t-title { fill: #e3e8ee; }
+      .t-sub { fill: #8f9bab; }
+      .t-muted { fill: #a3adb8; }
+      .s-l1 { stroke: #6ea8dc; }
+      .t-l1 { fill: #6ea8dc; }
+      .s-l2 { stroke: #7fa9d3; }
+      .t-l2 { fill: #7fa9d3; }
+      .s-l3 { stroke: #5f7893; }
+      .t-l3 { fill: #9db4cc; }
+      .s-emo { stroke: #b06b57; }
+      .t-emo { fill: #e0876f; }
+      .s-agent { stroke: #5c8a6e; }
+      .t-agent { fill: #83bd99; }
+    }
+  </style>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#f8fafc"/>
-      <stop offset="1" stop-color="#eef3f9"/>
+      <stop class="bg-top" offset="0" stop-color="#f8fafc"/>
+      <stop class="bg-bottom" offset="1" stop-color="#eef3f9"/>
     </linearGradient>
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
       <path d="M 0 0 L 10 5 L 0 10 z" fill="#7a8aa0"/>
@@ -11,23 +31,23 @@
 
   <rect width="800" height="440" fill="url(#bg)"/>
 
-  <text x="60" y="78" font-family="Georgia, serif" font-size="34" fill="#22303f">Dreamory</text>
-  <text x="60" y="106" font-size="15" fill="#7a8aa0" letter-spacing="1">HIERARCHICAL MEMORY &#183; EMOTION ENGINE &#183; AGENTIC TOOLS</text>
+  <text class="t-title" x="60" y="78" font-family="Georgia, serif" font-size="34" fill="#22303f">Dreamory</text>
+  <text class="t-sub" x="60" y="106" font-size="15" fill="#7a8aa0" letter-spacing="1">HIERARCHICAL MEMORY &#183; EMOTION ENGINE &#183; AGENTIC TOOLS</text>
 
   <!-- L1 -->
-  <rect x="60" y="150" width="330" height="64" rx="6" fill="#ffffff" stroke="#0056b3" stroke-width="1.5"/>
-  <text x="82" y="177" font-size="14" font-weight="bold" fill="#0056b3">L1 &#183; Context Window</text>
-  <text x="82" y="197" font-size="12.5" fill="#666">emotional state + personality slots</text>
+  <rect class="box s-l1" x="60" y="150" width="330" height="64" rx="6" fill="#ffffff" stroke="#0056b3" stroke-width="1.5"/>
+  <text class="t-l1" x="82" y="177" font-size="14" font-weight="bold" fill="#0056b3">L1 &#183; Context Window</text>
+  <text class="t-muted" x="82" y="197" font-size="12.5" fill="#666">emotional state + personality slots</text>
 
   <!-- L2 -->
-  <rect x="60" y="238" width="330" height="64" rx="6" fill="#ffffff" stroke="#4a7fb5" stroke-width="1.5"/>
-  <text x="82" y="265" font-size="14" font-weight="bold" fill="#4a7fb5">L2 &#183; Hot Zone</text>
-  <text x="82" y="285" font-size="12.5" fill="#666">in-memory, time-decay recall</text>
+  <rect class="box s-l2" x="60" y="238" width="330" height="64" rx="6" fill="#ffffff" stroke="#4a7fb5" stroke-width="1.5"/>
+  <text class="t-l2" x="82" y="265" font-size="14" font-weight="bold" fill="#4a7fb5">L2 &#183; Hot Zone</text>
+  <text class="t-muted" x="82" y="285" font-size="12.5" fill="#666">in-memory, time-decay recall</text>
 
   <!-- L3 -->
-  <rect x="60" y="326" width="330" height="64" rx="6" fill="#ffffff" stroke="#8aa4c0" stroke-width="1.5"/>
-  <text x="82" y="353" font-size="14" font-weight="bold" fill="#6d89a8">L3 &#183; Cold Storage</text>
-  <text x="82" y="373" font-size="12.5" fill="#666">PostgreSQL + pgvector, dual-axis retrieval</text>
+  <rect class="box s-l3" x="60" y="326" width="330" height="64" rx="6" fill="#ffffff" stroke="#8aa4c0" stroke-width="1.5"/>
+  <text class="t-l3" x="82" y="353" font-size="14" font-weight="bold" fill="#6d89a8">L3 &#183; Cold Storage</text>
+  <text class="t-muted" x="82" y="373" font-size="12.5" fill="#666">PostgreSQL + pgvector, dual-axis retrieval</text>
 
   <!-- flows between tiers -->
   <line x1="225" y1="214" x2="225" y2="238" stroke="#7a8aa0" stroke-width="1.5" marker-end="url(#arrow)"/>
@@ -36,18 +56,18 @@
   <line x1="285" y1="326" x2="285" y2="302" stroke="#7a8aa0" stroke-width="1.5" marker-end="url(#arrow)"/>
 
   <!-- emotion engine panel -->
-  <rect x="470" y="150" width="270" height="108" rx="6" fill="#ffffff" stroke="#d5806b" stroke-width="1.5"/>
-  <text x="492" y="179" font-size="14" font-weight="bold" fill="#c05f47">Emotion Engine</text>
-  <text x="492" y="200" font-size="12.5" fill="#666">3 hormone axes, distinct half-lives</text>
-  <text x="492" y="219" font-size="12.5" fill="#666">attachment-theory affection model</text>
-  <text x="492" y="238" font-size="12.5" fill="#666">no LLM in the hot path</text>
+  <rect class="box s-emo" x="470" y="150" width="270" height="108" rx="6" fill="#ffffff" stroke="#d5806b" stroke-width="1.5"/>
+  <text class="t-emo" x="492" y="179" font-size="14" font-weight="bold" fill="#c05f47">Emotion Engine</text>
+  <text class="t-muted" x="492" y="200" font-size="12.5" fill="#666">3 hormone axes, distinct half-lives</text>
+  <text class="t-muted" x="492" y="219" font-size="12.5" fill="#666">attachment-theory affection model</text>
+  <text class="t-muted" x="492" y="238" font-size="12.5" fill="#666">no LLM in the hot path</text>
 
   <!-- agents panel -->
-  <rect x="470" y="282" width="270" height="108" rx="6" fill="#ffffff" stroke="#6b9e7e" stroke-width="1.5"/>
-  <text x="492" y="311" font-size="14" font-weight="bold" fill="#4c8563">Agentic Layer</text>
-  <text x="492" y="332" font-size="12.5" fill="#666">bounded tool loop: search / grep / timers</text>
-  <text x="492" y="351" font-size="12.5" fill="#666">offline &#8220;dream&#8221; consolidation</text>
-  <text x="492" y="370" font-size="12.5" fill="#666">nightly distillation agent</text>
+  <rect class="box s-agent" x="470" y="282" width="270" height="108" rx="6" fill="#ffffff" stroke="#6b9e7e" stroke-width="1.5"/>
+  <text class="t-agent" x="492" y="311" font-size="14" font-weight="bold" fill="#4c8563">Agentic Layer</text>
+  <text class="t-muted" x="492" y="332" font-size="12.5" fill="#666">bounded tool loop: search / grep / timers</text>
+  <text class="t-muted" x="492" y="351" font-size="12.5" fill="#666">offline &#8220;dream&#8221; consolidation</text>
+  <text class="t-muted" x="492" y="370" font-size="12.5" fill="#666">nightly distillation agent</text>
 
   <!-- cross links -->
   <line x1="390" y1="204" x2="470" y2="204" stroke="#7a8aa0" stroke-width="1.5" stroke-dasharray="4 4" marker-end="url(#arrow)"/>

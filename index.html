@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
     <title>Juncheng Zhu | CS @ UWaterloo</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -13,7 +14,8 @@
         <div class="container">
             <h1>Juncheng Zhu</h1>
             <p class="subtitle">2A Honours Computer Science Student @ University of Waterloo</p>
-            
+            <p class="status-badge"><i class="fas fa-briefcase"></i> Seeking Software Engineering Co-op</p>
+
             <div class="social-links">
                 <a href="mailto:ezhu0508@gmail.com"><i class="fas fa-envelope"></i> Email</a>
                 <a href="https://github.com/j494zhu" target="_blank"><i class="fab fa-github"></i> GitHub</a>
@@ -24,13 +26,23 @@
     </header>
 
     <main class="container">
-        <h2 class="section-title">Selected Projects</h2>
+        <section class="page-section">
+            <h2 class="section-title">About</h2>
+            <p class="about-text">
+                I'm a second-year Computer Science student at the University of Waterloo,
+                with four years of competitive programming behind me (USACO Gold, CMO Qualifier).
+                These days I build <strong>AI&#8209;powered systems</strong> end to end, with a current focus on
+                <strong>LLM infrastructure</strong> — hierarchical memory, retrieval, and agentic tool design.
+            </p>
+        </section>
+
+        <h2 class="section-title" id="projects">Selected Projects</h2>
         
         <div class="project-grid">
 
             <article class="project-card">
                 <div class="card-image">
-                    <img src="images/dreamory_demo.svg" alt="Dreamory: three-tier memory architecture with emotion engine and agentic layer">
+                    <img loading="lazy" src="images/dreamory_demo.svg" alt="Dreamory: three-tier memory architecture with emotion engine and agentic layer">
                 </div>
                 <div class="card-content">
                     <div class="tags">
@@ -49,7 +61,7 @@
 
             <article class="project-card">
                 <div class="card-image">
-                    <img src="images/onyx_system_demo.png" alt="Onyx: AI-Enhanced Personal Analytics Platform">
+                    <img loading="lazy" src="images/onyx_system_demo.png" alt="Onyx: AI-Enhanced Personal Analytics Platform">
                 </div>
                 <div class="card-content">
                     <div class="tags">
@@ -67,9 +79,9 @@
                 </div>
             </article>
 
-            <article class="project-card">
+            <article class="project-card hidden-project">
                 <div class="card-image">
-                    <img src="images/snake_ai_demo.png" alt="Aetheris: Vectorized RL Engine">
+                    <img loading="lazy" src="images/snake_ai_demo.png" alt="Aetheris: Vectorized RL Engine">
                 </div>
                 <div class="card-content">
                     <div class="tags">
@@ -86,9 +98,9 @@
                 </div>
             </article>
             
-            <article class="project-card">
+            <article class="project-card hidden-project">
                 <div class="card-image">
-                    <img src="images/sakura_rain_effect_demo.jpg" alt="Sakura Rain Effect Demo">
+                    <img loading="lazy" src="images/sakura_rain_effect_demo.jpg" alt="Sakura Rain Effect Demo">
                 </div>
                 <div class="card-content">
                     <div class="tags">
@@ -106,9 +118,9 @@
                 </div>
             </article>
 
-            <article class="project-card">
+            <article class="project-card hidden-project">
                 <div class="card-image">
-                    <img src="images/firework-vs-ango-demo.png" alt="Fireworks Game Screenshot">
+                    <img loading="lazy" src="images/firework-vs-ango-demo.png" alt="Fireworks Game Screenshot">
                 </div>
                 <div class="card-content">
                     <div class="tags">
@@ -127,11 +139,137 @@
 
 
         </div>
+
+        <div class="projects-toggle-wrap" hidden>
+            <button id="projects-toggle" class="projects-toggle" aria-expanded="false" aria-controls="projects">
+                <span class="toggle-label">Show All Projects</span>
+                <i class="fas fa-chevron-down" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <section class="page-section">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills">
+                <div class="skill-row"><span class="skill-label">Languages</span><span>Python, C/C++, JavaScript, SQL, Rust</span></div>
+                <div class="skill-row"><span class="skill-label">Backend &amp; Cloud</span><span>FastAPI, Flask, Nginx, AWS (EC2), Docker, Linux, Redis, Server-Sent Events (SSE)</span></div>
+                <div class="skill-row"><span class="skill-label">Frontend</span><span>HTML/CSS, React, Chart.js</span></div>
+                <div class="skill-row"><span class="skill-label">AI/ML &amp; Data</span><span>PyTorch, RAG, pgvector, NumPy, Pandas</span></div>
+                <div class="skill-row"><span class="skill-label">Tools &amp; Databases</span><span>Git, GitHub Actions (CI/CD), Pytest, PostgreSQL, SQLite</span></div>
+            </div>
+        </section>
+
+        <section class="page-section">
+            <h2 class="section-title">Education</h2>
+            <div class="edu-item">
+                <div class="edu-head">
+                    <strong>University of Waterloo</strong>
+                    <span class="edu-date">2025 &ndash; present</span>
+                </div>
+                <p>Honours Computer Science. Ren&eacute; Descartes National Scholarship ($25,000) &middot; USACO Gold Division &middot; CMO Qualifier (Top 50 in Canada).</p>
+            </div>
+            <div class="edu-item">
+                <div class="edu-head">
+                    <strong>Bayview Secondary School</strong>
+                    <span class="edu-date">2021 &ndash; 2025</span>
+                </div>
+                <p>Math Club President &mdash; mentored 30+ students and led the team to 13th place globally in HMMT Team Guts.</p>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Juncheng Zhu. Built with minimal code.</p>
+        <p>&copy; 2026 Juncheng Zhu.</p>
     </footer>
+
+    <script>
+    (function () {
+        var grid = document.querySelector('.project-grid');
+        var wrap = document.querySelector('.projects-toggle-wrap');
+        var btn = document.getElementById('projects-toggle');
+        var label = btn.querySelector('.toggle-label');
+        var hidden = Array.prototype.slice.call(grid.querySelectorAll('.hidden-project'));
+        if (!hidden.length) return;
+
+        var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var EASE = 'cubic-bezier(0.22, 1, 0.36, 1)';
+        var animating = false;
+
+        // Progressive enhancement: collapse only when JS is running
+        grid.classList.add('collapsed');
+        wrap.hidden = false;
+
+        function animateHeight(from, to, done) {
+            grid.style.overflow = 'hidden';
+            grid.animate(
+                [{ height: from + 'px' }, { height: to + 'px' }],
+                { duration: 500, easing: EASE }
+            );
+            // Timer-based sequencing: animation finish events can be delayed
+            // or throttled, so never gate state changes on them.
+            setTimeout(function () {
+                grid.style.overflow = '';
+                animating = false;
+                if (done) done();
+            }, 520);
+        }
+
+        function expand() {
+            var from = grid.offsetHeight;
+            grid.classList.remove('collapsed');
+            var to = grid.offsetHeight;
+            animateHeight(from, to);
+            hidden.forEach(function (card, i) {
+                card.animate(
+                    [
+                        { opacity: 0, transform: 'translateY(18px)' },
+                        { opacity: 1, transform: 'translateY(0)' }
+                    ],
+                    { duration: 420, delay: 140 + i * 80, easing: 'ease-out', fill: 'backwards' }
+                );
+            });
+        }
+
+        function collapse() {
+            hidden.forEach(function (card, i) {
+                card.animate(
+                    [
+                        { opacity: 1, transform: 'translateY(0)' },
+                        { opacity: 0, transform: 'translateY(10px)' }
+                    ],
+                    { duration: 220, delay: i * 40, easing: 'ease-in', fill: 'forwards' }
+                );
+            });
+            var fadeTotal = 220 + (hidden.length - 1) * 40 + 30;
+            setTimeout(function () {
+                var from = grid.offsetHeight;
+                grid.classList.add('collapsed');
+                hidden.forEach(function (card) {
+                    card.getAnimations().forEach(function (a) { a.cancel(); });
+                });
+                var to = grid.offsetHeight;
+                animateHeight(from, to, function () {
+                    document.getElementById('projects').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                });
+            }, fadeTotal);
+        }
+
+        btn.addEventListener('click', function () {
+            if (animating) return;
+            var expanding = grid.classList.contains('collapsed');
+            btn.setAttribute('aria-expanded', String(expanding));
+            btn.classList.toggle('open', expanding);
+            label.textContent = expanding ? 'Show Less' : 'Show All Projects';
+
+            if (reduceMotion) {
+                grid.classList.toggle('collapsed', !expanding);
+                if (!expanding) document.getElementById('projects').scrollIntoView();
+                return;
+            }
+            animating = true;
+            if (expanding) { expand(); } else { collapse(); }
+        });
+    })();
+    </script>
 
 </body>
 </html>
