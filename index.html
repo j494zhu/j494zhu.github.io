@@ -12,7 +12,7 @@
     <header>
         <div class="container">
             <h1>Juncheng Zhu</h1>
-            <p class="subtitle">1B Honours Computer Science Student @ University of Waterloo</p>
+            <p class="subtitle">2A Honours Computer Science Student @ University of Waterloo</p>
             
             <div class="social-links">
                 <a href="mailto:ezhu0508@gmail.com"><i class="fas fa-envelope"></i> Email</a>
@@ -27,30 +27,49 @@
         <h2 class="section-title">Selected Projects</h2>
         
         <div class="project-grid">
-            
+
             <article class="project-card">
                 <div class="card-image">
-                    <img src="images/onyx_system_demo.png" alt="Onyx: Neural-Link Behavioral Engine">
+                    <img src="images/dreamory_demo.svg" alt="Dreamory: three-tier memory architecture with emotion engine and agentic layer">
                 </div>
                 <div class="card-content">
                     <div class="tags">
-                        <span class="tag">Python (Flask)</span>
-                        <span class="tag">HITL Architecture</span>
-                        <span class="tag">SLM Data Pipeline</span>
-                        <span class="tag">Nginx/Linux</span>
+                        <span class="tag">Python (FastAPI)</span>
+                        <span class="tag">PostgreSQL + pgvector</span>
+                        <span class="tag">Agentic Tools</span>
                     </div>
-                    <h3>Onyx: Neural-Link Engine</h3>
-                    <p>A <strong>Human-in-the-Loop (HITL)</strong> data harvesting system designed to bridge the gap between human micro-decisions and personal AI agents. Features a <strong>RAG-driven</strong> backend for proprietary dataset construction and real-time behavioral alignment via <strong>LLM-annotated</strong> telemetry.</p>
+                    <h3>Dreamory: Memory Infrastructure for AI Companions</h3>
+                    <p>Infrastructure that lets AI companions actually remember. A <strong>three-tier hierarchical memory system</strong> (context window, time-decay hot zone, cold storage with dual-axis content/emotion retrieval), a pure-code <strong>emotion engine</strong> grounded in attachment theory, and a bounded <strong>agentic tool loop</strong> with offline &ldquo;dream&rdquo; consolidation. Verified by <strong>144 offline unit tests</strong>; now being re-architected into decoupled, agent-mediated tools.</p>
                     <div class="card-actions">
-                        <a href="https://onyx.j494zhu.com" class="btn btn-outline" target="_blank">Live Demo</a>
-                        <a href="https://github.com/j494zhu/Obsidian-Time-Logger" class="btn btn-text" target="_blank">Research Source &rarr;</a>
+                        <a href="https://github.com/j494zhu/Dreamory" class="btn btn-outline" target="_blank">Source Code</a>
+                        <a href="https://github.com/j494zhu/Dreamory#readme" class="btn btn-text" target="_blank">Design Notes &rarr;</a>
                     </div>
                 </div>
             </article>
 
             <article class="project-card">
                 <div class="card-image">
-                    <img src="images/snake_ai_demo.png" alt="Snake AI: Vectorized RL Engine">
+                    <img src="images/onyx_system_demo.png" alt="Onyx: AI-Enhanced Personal Analytics Platform">
+                </div>
+                <div class="card-content">
+                    <div class="tags">
+                        <span class="tag">Python (Flask)</span>
+                        <span class="tag">Redis + SSE</span>
+                        <span class="tag">RAG</span>
+                        <span class="tag">Nginx/Linux</span>
+                    </div>
+                    <h3>Onyx: Personal Analytics Platform</h3>
+                    <p>An AI-enhanced personal analytics platform on AWS EC2. A <strong>Flask/Gunicorn</strong> backend behind Nginx syncs text across devices in <strong>~150ms</strong> via Server-Sent Events and <strong>Redis Pub/Sub</strong>, while a <strong>RAG pipeline</strong> over activity logs and user feedback (pgvector similarity search) drives personalized suggestions and React dashboards.</p>
+                    <div class="card-actions">
+                        <a href="https://onyx.j494zhu.com" class="btn btn-outline" target="_blank">Live Demo</a>
+                        <a href="https://github.com/j494zhu/Obsidian-Time-Logger" class="btn btn-text" target="_blank">Data Logger &rarr;</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="card-image">
+                    <img src="images/snake_ai_demo.png" alt="Aetheris: Vectorized RL Engine">
                 </div>
                 <div class="card-content">
                     <div class="tags">
@@ -59,7 +78,7 @@
                         <span class="tag">Rayon Parallelism</span>
                         <span class="tag">Flask/Nginx</span>
                     </div>
-                    <h3>Snake AI: Vectorized RL Engine</h3>
+                    <h3>Aetheris: Vectorized RL Engine</h3>
                     <p>A high-performance <strong>Reinforcement Learning</strong> environment decoupling the game engine from the neural network. Features a custom <strong>Rust-based</strong> simulator utilizing <strong>Rayon</strong> for parallel execution, bypassing the Python GIL to dramatically accelerate <strong>Dueling Double DQN</strong> training throughput.</p>
                     <div class="card-actions">
                         <a href="http://snake.j494zhu.com" class="btn btn-outline" target="_blank">Live Demo</a>
