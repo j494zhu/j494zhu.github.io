@@ -174,7 +174,7 @@ main {
 /* Grid System */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* 响应式布局 */
+    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr)); /* 响应式布局,窄屏不溢出 */
     gap: 40px;
 }
 
@@ -334,4 +334,6 @@ footer {
     .skill-row { flex-direction: column; gap: 2px; }
     .skill-label { flex: none; }
     .edu-head { flex-direction: column; }
+    /* 窄屏下按比例自适应高度,避免横向裁切示意图文字 */
+    .card-image { height: auto; aspect-ratio: 800 / 440; }
 }
